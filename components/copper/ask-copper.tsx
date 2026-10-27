@@ -39,9 +39,7 @@ const WAITING: Progress = { steps: [], reply: "", status: "working" };
 function messagesOf(turns: Turn[]): ChatMessage[] {
   return turns.flatMap((turn) => [
     { role: "user" as const, content: turn.question },
-    ...(turn.progress &&
-    turn.progress.status !== "working" &&
-    turn.progress.reply
+    ...(turn.progress && turn.progress.status === "done" && turn.progress.reply
       ? [{ role: "assistant" as const, content: turn.progress.reply }]
       : []),
   ]);

@@ -112,6 +112,7 @@ export async function askCopper(
             progress.reply += part.text;
             break;
           case "error":
+            console.error("[askCopper] the model stream failed:", part.error);
             progress.status = "error";
             break;
           default:
@@ -123,7 +124,8 @@ export async function askCopper(
       if (progress.status === "working") progress.status = "done";
       // A stream that ends normally with no words still ends well.
       if (!progress.reply) progress.reply = APOLOGY;
-    } catch {
+    } catch (error) {
+      console.error("[askCopper] the question failed:", error);
       progress.status = "error";
       if (!progress.reply) progress.reply = APOLOGY;
     }
