@@ -141,7 +141,8 @@ In this repo, pull the part 2 files from the course remote (the class repo;
 my own repo is origin). First commit anything uncommitted, then:
 git pull --no-rebase course module-2-part-1
 npm install
-Then show me what changed.
+If the merge stops over specs/module-2/report.md, that worksheet was retired:
+delete it and finish the merge. Then show me what changed.
 ```
 
 That brings in the migration, the seed, the Supabase client and the MCP config,
