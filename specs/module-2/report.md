@@ -2,6 +2,10 @@
 
 _Fictional — for educational use._
 
+> **Not graded.** This worksheet is optional from part 2 on: every point in
+> Module 2 is now awarded automatically. It's kept because the comparison in
+> section 1 is the clearest way to see what the tools actually do.
+
 **Your name:** Dylan Rose
 
 Ask all five questions with **Use tools on**, then flip the switch and ask the same five in the tools-off chat. (They're separate conversations, so Copper can't copy its own answers.) Find each answer's cost and time in the terminal running `npm run dev`: every call prints a line starting `[ai_calls]` with its tokens, cost and time.
